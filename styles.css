@@ -1,0 +1,668 @@
+/* ============================================
+   PHP Word Game — Styles
+   Dark theme, responsive, game UI
+   ============================================ */
+
+/* --- Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- Container --- */
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 700px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Typography --- */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #e94560, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #a0a0b0;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #c0c0d0;
+}
+
+.subtitle {
+    text-align: center;
+    color: #888;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #e94560, #c23152);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #ff6b6b, #e94560);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: #fff;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #27ae60, #219a52);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* --- Forms --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #c0c0d0;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #e94560;
+    box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+}
+
+.form-group input::placeholder {
+    color: #666;
+}
+
+.form-group select option {
+    background: #1a1a2e;
+    color: #e0e0e0;
+}
+
+/* --- Error Messages --- */
+.error {
+    background: rgba(233, 69, 96, 0.15);
+    border: 1px solid rgba(233, 69, 96, 0.3);
+    color: #ff6b6b;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- Warning Box --- */
+.warning-box {
+    background: rgba(241, 196, 15, 0.1);
+    border: 1px solid rgba(241, 196, 15, 0.3);
+    color: #f1c40f;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- Rules Section --- */
+.rules {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.rules h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.rules ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rules ul li {
+    padding: 6px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #a0a0b0;
+    font-size: 0.9rem;
+}
+
+.rules ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 5px;
+    color: #e94560;
+}
+
+/* --- Timer --- */
+.timer {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    font-variant-numeric: tabular-nums;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.timer.warning {
+    color: #f1c40f;
+    background: rgba(241, 196, 15, 0.1);
+}
+
+.timer.danger {
+    color: #e94560;
+    background: rgba(233, 69, 96, 0.15);
+    animation: pulse 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+.timer-label {
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* --- Game Info Bar --- */
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.game-info .player-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e94560;
+}
+
+.game-info .category-badge {
+    background: rgba(233, 69, 96, 0.15);
+    color: #e94560;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.game-info .difficulty-badge {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.difficulty-badge.easy {
+    background: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+}
+
+.difficulty-badge.medium {
+    background: rgba(241, 196, 15, 0.15);
+    color: #f1c40f;
+}
+
+.difficulty-badge.hard {
+    background: rgba(233, 69, 96, 0.15);
+    color: #e94560;
+}
+
+/* --- Word Display --- */
+.word-display {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5rem;
+    letter-spacing: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: #fff;
+    word-break: break-all;
+}
+
+.word-display .letter {
+    display: inline-block;
+    min-width: 35px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    margin: 5px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.word-display .letter.revealed {
+    border-bottom-color: #2ecc71;
+    color: #2ecc71;
+}
+
+/* --- Lives --- */
+.lives {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 15px 0;
+    letter-spacing: 5px;
+}
+
+.lives .heart-lost {
+    opacity: 0.25;
+    filter: grayscale(1);
+}
+
+/* --- Wrong Guesses --- */
+.wrong-guesses {
+    text-align: center;
+    margin: 10px 0 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.wrong-guesses span {
+    color: #e94560;
+    font-weight: 600;
+    margin: 0 3px;
+    font-size: 1rem;
+}
+
+/* --- Alphabet Grid --- */
+.alphabet-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.alphabet-grid .letter-btn {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alphabet-grid .letter-btn:hover {
+    background: rgba(233, 69, 96, 0.3);
+    border-color: #e94560;
+    transform: translateY(-2px);
+}
+
+.alphabet-grid .letter-btn.correct {
+    background: rgba(46, 204, 113, 0.3);
+    border-color: #2ecc71;
+    color: #2ecc71;
+    pointer-events: none;
+}
+
+.alphabet-grid .letter-btn.wrong {
+    background: rgba(233, 69, 96, 0.2);
+    border-color: #e94560;
+    color: #e94560;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.alphabet-grid .letter-btn.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+/* --- Hangman ASCII Art --- */
+.hangman-art {
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: #e94560;
+    white-space: pre;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    display: inline-block;
+    min-width: 180px;
+}
+
+.hangman-wrapper {
+    text-align: center;
+}
+
+/* --- Hint Button --- */
+.hint-section {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.btn-hint {
+    background: rgba(241, 196, 15, 0.15);
+    border: 1px solid rgba(241, 196, 15, 0.3);
+    color: #f1c40f;
+    padding: 8px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-hint:hover {
+    background: rgba(241, 196, 15, 0.25);
+    transform: translateY(-1px);
+}
+
+.btn-hint:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.hint-text {
+    margin-top: 10px;
+    color: #f1c40f;
+    font-style: italic;
+    font-size: 0.9rem;
+    background: rgba(241, 196, 15, 0.08);
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* --- Score Display --- */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.score-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px 25px;
+    text-align: center;
+    flex: 1;
+    min-width: 140px;
+}
+
+.score-card .player-label {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.score-card .score-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e94560;
+}
+
+.score-card .player-name-label {
+    font-size: 0.95rem;
+    color: #c0c0d0;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+/* --- Result Screen --- */
+.result-message {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.result-message.win {
+    color: #2ecc71;
+}
+
+.result-message.lose {
+    color: #e94560;
+}
+
+.revealed-word {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 8px;
+    margin: 15px 0;
+    color: #fff;
+    font-weight: 700;
+}
+
+.time-taken {
+    text-align: center;
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* --- Round History Table --- */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.85rem;
+}
+
+.history-table th {
+    background: rgba(233, 69, 96, 0.15);
+    color: #e94560;
+    padding: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.history-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #a0a0b0;
+}
+
+.history-table tr:hover td {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* --- Difficulty Selector (Radio Buttons) --- */
+.difficulty-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.difficulty-option {
+    flex: 1;
+    min-width: 100px;
+}
+
+.difficulty-option input[type="radio"] {
+    display: none;
+}
+
+.difficulty-option label {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.difficulty-option input[type="radio"]:checked + label {
+    border-color: #e94560;
+    background: rgba(233, 69, 96, 0.15);
+    color: #e94560;
+}
+
+.difficulty-option label:hover {
+    border-color: rgba(233, 69, 96, 0.5);
+}
+
+.difficulty-option .diff-detail {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #888;
+    margin-top: 3px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .word-display {
+        font-size: 1.8rem;
+        letter-spacing: 8px;
+    }
+
+    .word-display .letter {
+        min-width: 25px;
+    }
+
+    .timer {
+        font-size: 2rem;
+    }
+
+    .alphabet-grid .letter-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+    }
+
+    .hangman-art {
+        font-size: 1rem;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .game-info {
+        justify-content: center;
+        text-align: center;
+    }
+}
